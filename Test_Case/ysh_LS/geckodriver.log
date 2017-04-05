@@ -1,0 +1,37 @@
+1489635433958	geckodriver	INFO	Listening on 127.0.0.1:54269
+1489635435988	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.Bvk2QpdEOuFV
+1489635435992	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489635436001	geckodriver::marionette	INFO	Connecting to Marionette on localhost:54280
+1489635437464	Marionette	INFO	Listening on port 54280
+1489635439579	Marionette	INFO	startBrowser 3fd8a73d-5f46-4853-9075-475a5ccd0139
+[Child 9348] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9348] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489634273034	geckodriver	INFO	Listening on 127.0.0.1:53406
+1489634275083	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.9La0iYcfgJ5q
+1489634275089	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489634275100	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53413
+1489634276130	Marionette	INFO	Listening on port 53413
+1489634277817	Marionette	INFO	startBrowser ab2476d7-991b-4a8b-9625-8b98263d4ef0
+[Child 8188] WARNING: pipe error: 109: file c:/builds/moz2_s1489634280106	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.1TEv5VTVp1Ds
+1489634280111	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489634280120	geckodriver::marionette	I[Child 10168] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+d-8db4-04ea71337e99
+[Child 9828] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9828] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+console.error: 
+  Message: Error: Connection closed before committing the transaction.
+  Stack:
+    ConnectionData.prototype<.executeTransaction/promise</transactionPromise<@resource://gre/modules/Sqlite.jsm:617:19
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+Spinner.prototype.observe@resource://gre/modules/AsyncShutdown.jsm:551:9
+nsAsyncShutdownClient.prototype.addBlocker/moduleBlocker/<@resource://gre/components/nsAsyncShutdown.js:157:15
+Promise@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:388:5
+nsAsyncShutdownClient.prototype.addBlocker/moduleBlocker@resource://gre/components/nsAsyncShutdown.js:153:29
+Barrier/this.client.addBlocker/promise</trigger@resource://gre/modules/AsyncShutdown.jsm:720:23
+Barrier.prototype<._wait@resource://gre/modules/AsyncShutdown.jsm:867:7
+Barrier.prototype<.wait@resource://gre/modules/AsyncShutdown.jsm:851:28
+Spinner.prototype.observe@resource://gre/modules/AsyncShutdown.jsm:534:17
+

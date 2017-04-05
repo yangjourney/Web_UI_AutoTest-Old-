@@ -1,0 +1,14 @@
+1489568054535	geckodriver	INFO	Listening on 127.0.0.1:53522
+1489568056568	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.SpBPbRvXAIwI
+1489568056575	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489568056586	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53528
+1489568057674	Marionette	INFO	Listening on port 53528
+1489568059357	Marionette	INFO	startBrowser b9518248-ccaf-4191-a9f5-2309d3aca584
+Vector smash protection is enabled.
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=te&json=1&p=3&sid=1448_21079_17001_22035_22176_20927&req=2&csor=2&pwd=t&cb=jQuery1102008195354803372412_1489568060310&_=1489568060313, line 1: TypeError: jQuery1102008195354803372412_1489568060310 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=t&json=1&p=3&sid=1448_21079_17001_22035_22176_20927&req=2&csor=1&cb=jQuery1102008195354803372412_1489568060310&_=1489568060312, line 1: TypeError: jQuery1102008195354803372412_1489568060310 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=tes&json=1&p=3&sid=1448_21079_17001_22035_22176_20927&req=2&csor=3&pwd=te&cb=jQuery1102008195354803372412_1489568060310&_=1489568060314, line 1: TypeError: jQuery1102008195354803372412_1489568060310 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=test2&json=1&p=3&sid=1448_21079_17001_22035_22176_20927&req=2&csor=5&pwd=test&cb=jQuery1102008195354803372412_1489568060310&_=1489568060316, line 1: TypeError: jQuery1102008195354803372412_1489568060310 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=test&json=1&p=3&sid=1448_21079_17001_22035_22176_20927&req=2&csor=4&pwd=tes&cb=jQuery1102008195354803372412_1489568060310&_=1489568060315, line 1: TypeError: jQuery1102008195354803372412_1489568060310 is not a function
+[Child 9104] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[NPAPI 4372] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052

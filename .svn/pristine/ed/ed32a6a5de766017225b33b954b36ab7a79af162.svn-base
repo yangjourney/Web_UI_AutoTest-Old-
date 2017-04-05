@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>Test Report</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-03-15 08:46:32</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:28.422000</p>
+<p class='attribute'><strong>Status:</strong> Pass 2 Failure 1</p>
+
+<p class='description'>Case Execution Details:</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>baidu.search.test_baidu.BaiduTest: 百度测试</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_baidu_1</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_baidu_2</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='failClass'>
+    <td>youdao.test_youdao.YoudaoTest: 有道测试</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_youdao</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        fail</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: Traceback (most recent call last):
+  File "E:\workspace\Web_UI_AutoTest\Test_Case\youdao\test_youdao.py", line 32, in test_youdao
+    self.assertIn("hello", page_source)
+AssertionError: 'hello' not found in u'&lt;!DOCTYPE html&gt;\r\n&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;&lt;meta charset="UTF-8" /&gt;&lt;meta name="keywords" content="\u6709\u9053, \u641c\u7d22, \u8bcd\u5178, \u7ffb\u8bd1, \u4e91\u7b14\u8bb0, \u7b14\u8bb0, \u60e0\u60e0\u7f51, \u60e0\u60e0\u8d2d\u7269\u52a9\u624b, \u8d2d\u7269\u641c\u7d22, \u56fe\u7247\u641c\u7d22, \u89c6\u9891\u641c\u7d22, \u65b0\u95fb\u641c\u7d22, \u7f51\u6613\u6709\u9053, \u5728\u7ebf\u7ffb\u8bd1, \u4e13\u4e1a\u7ffb\u8bd1" /&gt;&lt;meta name="description" content="\u7f51\u6613\u65d7\u4e0b\u5229\u7528\u5927\u6570\u636e\u6280\u672f\u63d0\u4f9b\u79fb\u52a8\u4e92\u8054\u7f51\u5e94\u7528\u7684\u5b50\u516c\u53f8\uff0c\u8fc7\u53bb8\u5e74\uff0c\u5148\u540e\u63a8\u51fa\u6709\u9053\u8bcd\u5178\u3001\u6709\u9053\u7ffb\u8bd1\u5b98\u3001\u6709\u9053\u4e91\u7b14\u8bb0\u3001\u60e0\u60e0\u7f51\u3001\u6709\u9053\u63a8\u5e7f\u3001\u6709\u9053\u7cbe\u54c1\u8bfe\u3001\u6709\u9053\u53e3\u8bed\u5927\u5e08\u7b49\u7cfb\u5217\u4ea7\u54c1\uff0c\u603b\u7528\u6237\u91cf\u8fbe\u52307\u4ebf\u3002" /&gt;&lt;title&gt;\u6709\u9053\u9996\u9875&lt;/title&gt;&lt;link href="http://shared.ydstatic.com/images/favicon.ico" type="image/x-icon" rel="shortcut icon" /&gt;&lt;link rel="stylesheet" href="http://shared.ydstatic.com/dict/v2016/entry/pc2.css" /&gt;&lt;script&gt;var _rlog = _rlog || [];\n    // \u6307\u5b9a product id\n    _rlog.push(["_setAccount" , "dictweb"]);\n    _rlog.push(["_addPost" , "page" , "index"]);&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div id="nav"&gt;&lt;div id="more"&gt;&lt;div&gt;&lt;span&gt;&lt;/span&gt;\u66f4\u591a\u4ea7\u54c1&lt;/div&gt;&lt;div class="menu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="http://app.xue.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_jingpink"&gt;&lt;/span&gt;&lt;div&gt;\u6709\u9053\u7cbe\u54c1\u8bfeAPP&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://kouyu.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_kouyu"&gt;&lt;/span&gt;&lt;div&gt;\u6709\u9053\u53e3\u8bed\u5927\u5e08&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://fanyiguan.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_translator"&gt;&lt;/span&gt;&lt;div&gt;\u6709\u9053\u7ffb\u8bd1\u5b98&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://hanyu.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_yuwen"&gt;&lt;/span&gt;&lt;div&gt;\u6709\u9053\u8bed\u6587\u8fbe\u4eba&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://yidu.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_eread"&gt;&lt;/span&gt;&lt;div&gt;\u6709\u9053e\u8bfb&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://postgrad.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_kaoyan"&gt;&lt;/span&gt;&lt;div&gt;\u6709\u9053\u8003\u7814&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://cet46.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_cet"&gt;&lt;/span&gt;&lt;div&gt;\u6709\u9053\u56db\u516d\u7ea7&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://math.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_calculator"&gt;&lt;/span&gt;&lt;div&gt;\u8d85\u7ea7\u8ba1\u7b97\u5668&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://zhushou.huihui.cn/?keyfrom=dict2.index"&gt;&lt;span class="icon_huihui"&gt;&lt;/span&gt;&lt;div&gt;\u60e0\u60e0\u8d2d\u7269\u52a9\u624b&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://dsp.youdao.com/?keyfrom=dict2.index"&gt;&lt;span class="icon_zhixuan"&gt;&lt;/span&gt;&lt;div&gt;\u6709\u9053\u667a\u9009&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://dsp.youdao.com/dsp/website/developer.shtml?keyfrom=dict2.index"&gt;&lt;span class="icon_developer"&gt;&lt;/span&gt;&lt;div&gt;\u5f00\u53d1\u8005\u5e73\u53f0&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a target="_blank" href="http://www.youdao.com/about/?keyfrom=dict2.index"&gt;\u5168\u90e8\u4ea7\u54c1&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="http://www.huihui.cn/?keyfrom=dict2.index"&gt;\u60e0\u60e0&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://f.youdao.com/?keyfrom=dict2.index"&gt;\u4eba\u5de5\u7ffb\u8bd1&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://note.youdao.com/?keyfrom=dict2.index"&gt;\u4e91\u7b14\u8bb0&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://ke.youdao.com/?keyfrom=dict2.index"&gt;\u7cbe\u54c1\u8bfe&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://fanyi.youdao.com/?keyfrom=dict2.index"&gt;\u7ffb\u8bd1&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://dict.youdao.com/?keyfrom=dict2.index"&gt;\u8bcd\u5178&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div id="margin1"&gt;&lt;/div&gt;&lt;div id="logo"&gt;&lt;div class="logo"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="margin2"&gt;&lt;/div&gt;&lt;div id="search" style="height: 44px;"&gt;&lt;div class="wrap"&gt;&lt;form method="GET" action="/search" id="form"&gt;&lt;img class="logo" src="http://shared.ydstatic.com/dict/v2016/logo.png" alt="\u6709\u9053\u56fe\u6807" /&gt;&lt;div id="selectType"&gt;&lt;div id="type"&gt;\u4e2d\u82f1&lt;/div&gt;&lt;div class="side"&gt;1&lt;/div&gt;&lt;span class="arrow"&gt;&lt;/span&gt;&lt;ul id="typeList"&gt;&lt;li&gt;\u4e2d\u82f1&lt;/li&gt;&lt;li&gt;\u4e2d\u6cd5&lt;/li&gt;&lt;li&gt;\u4e2d\u97e9&lt;/li&gt;&lt;li&gt;\u4e2d\u65e5&lt;/li&gt;&lt;li&gt;\u4e2d\u8461&lt;/li&gt;&lt;li&gt;\u4e2d\u5fb7&lt;/li&gt;&lt;li&gt;\u4e2d\u897f&lt;/li&gt;&lt;li&gt;\u4e2d\u4fc4&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div id="border"&gt;&lt;input name="le" id="translateType" value="eng" type="text" /&gt; &lt;input name="q" onmouseover="this.focus()" onfocus="this.select()" maxlength="256" id="translateContent" autocomplete="off" placeholder="\u5728\u6b64\u8f93\u5165\u8981\u7ffb\u8bd1\u7684\u5355\u8bcd\u6216\u6587\u5b57" type="text" /&gt; &lt;input name="keyfrom" value="dict2.index" type="hidden" /&gt; &lt;span id="hnwBtn" class="hand-write"&gt;&lt;/span&gt;&lt;/div&gt;&lt;button&gt;\u7ffb\u8bd1&lt;/button&gt;&lt;/form&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="margin3"&gt;&lt;span&gt;&lt;a target="_blank" href="http://cidian.youdao.com/?keyfrom=dict2.index"&gt;\u4e0b\u8f7d\u8bcd\u5178\u5ba2\u6237\u7aef&lt;/a&gt;&lt;/span&gt; | &lt;span&gt;&lt;a target="_blank" href="http://cidian.youdao.com/mobile.html?keyfrom=dict2.index"&gt;\u4e0b\u8f7d\u8bcd\u5178\u79fb\u52a8\u7aef&lt;/a&gt;&lt;/span&gt; | &lt;span&gt;&lt;a target="_blank" href="http://dict.youdao.com/wordbook/wordlist?keyfrom=dict2.index"&gt;\u67e5\u770b\u5355\u8bcd\u672c&lt;/a&gt;&lt;/span&gt; | &lt;span class="ugc-link"&gt;&lt;a href="http://c.youdao.com/dict/ugc/ugc-activity.html"&gt;\u79d2\u61c2\u91ca\u4e49&lt;sup&gt;\u2022&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;div id="doc2"&gt;&lt;div class="wrap"&gt;&lt;div class="fl"&gt;&lt;div class="channel" style="height: 44px;"&gt;&lt;div class="popout"&gt;&lt;div class="container"&gt;&lt;span class="active"&gt;\u7cbe\u9009\u9605\u8bfb&lt;/span&gt;&lt;span&gt;\u5fc5\u5907\u8bfe\u7a0b&lt;/span&gt;&lt;span&gt;\u6298\u6263\u7cbe\u9009&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="vista"&gt;&lt;div class="news"&gt;&lt;a href="http://xue.youdao.com/sw/m/1325961?keyfrom=dict2.index" target="_blank"&gt;&lt;img src="http://oimagea1.ydstatic.com/image?url=http://ydschool-online.nos.netease.com/14894630519681_%E5%89%AF%E6%9C%AC.jpg&amp;amp;product=dict-homepage&amp;amp;w=200&amp;amp;h=150&amp;amp;fill=0&amp;amp;cw=200&amp;amp;ch=150&amp;amp;sbc=0&amp;amp;cgra=CENTER" alt="\u72c4\u66f4\u65af\u8bf4\uff1a\u60f3\u60f3\u4f60\u76ee\u524d\u62e5\u6709\u7684\u5e78\u798f" /&gt;&lt;/a&gt;&lt;div class="news-detail"&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/sw/m/1325961?keyfrom=dict2.index" class="title" target="_blank"&gt;\u72c4\u66f4\u65af\u8bf4\uff1a\u60f3\u60f3\u4f60\u76ee\u524d\u62e5\u6709\u7684\u5e78\u798f&lt;/a&gt;&lt;/h3&gt;&lt;p class="summary"&gt;&lt;/p&gt;&lt;div class="note1"&gt;&lt;span class="icon_comment"&gt;&lt;/span&gt;&lt;span class="comment"&gt;20&lt;/span&gt;&lt;span class="icon_like"&gt;&lt;/span&gt;&lt;span class="like"&gt;33&lt;/span&gt;&lt;/div&gt;&lt;div class="note2"&gt;&lt;span class="type"&gt;\u82f1\u8bed\u529f\u592b&lt;/span&gt;&lt;span class="date"&gt;3-15&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="news"&gt;&lt;a href="http://xue.youdao.com/sw/m/1326001?keyfrom=dict2.index" target="_blank"&gt;&lt;img src="http://oimagea1.ydstatic.com/image?url=http://ydschool-online.nos.netease.com/14894792386316.jpg&amp;amp;product=dict-homepage&amp;amp;w=200&amp;amp;h=150&amp;amp;fill=0&amp;amp;cw=200&amp;amp;ch=150&amp;amp;sbc=0&amp;amp;cgra=CENTER" alt="\u6bcf\u65e5\u5355\u8bcd018\uff1amiscellaneous" /&gt;&lt;/a&gt;&lt;div class="news-detail"&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/sw/m/1326001?keyfrom=dict2.index" class="title" target="_blank"&gt;\u6bcf\u65e5\u5355\u8bcd018\uff1amiscellaneous&lt;/a&gt;&lt;/h3&gt;&lt;p class="summary"&gt;&lt;/p&gt;&lt;div class="note1"&gt;&lt;span class="icon_comment"&gt;&lt;/span&gt;&lt;span class="comment"&gt;30&lt;/span&gt;&lt;span class="icon_like"&gt;&lt;/span&gt;&lt;span class="like"&gt;83&lt;/span&gt;&lt;/div&gt;&lt;div class="note2"&gt;&lt;span class="type"&gt;\u6211\u7231\u80cc\u5355\u8bcd&lt;/span&gt;&lt;span class="date"&gt;3-15&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="course"&gt;&lt;div class="category"&gt;&lt;span class="active"&gt;\u56db\u516d\u7ea7&lt;/span&gt;&lt;span&gt;\u8003\u7814&lt;/span&gt;&lt;span&gt;GRE&lt;/span&gt;&lt;span&gt;\u96c5\u601d&lt;/span&gt;&lt;span&gt;\u5b9e\u7528\u82f1\u8bed&lt;/span&gt;&lt;/div&gt;&lt;div id="CET" class="cate start"&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2555?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimageb7.ydstatic.com/image?id=-8481926752101875338&amp;amp;product=bisheng" alt="\u66f2\u6839\u4e07\u8bcd\u73ed\uff08\u7b2c\u4e8c\u5b63\uff09" /&gt;&lt;div class="time"&gt;2017-07-10 19:00\u81f32017-08-10 20:30&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2555?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u66f2\u6839\u4e07\u8bcd\u73ed\uff08\u7b2c\u4e8c\u5b63\uff09&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;199&lt;/div&gt;&lt;div class="name"&gt;\u6709\u9053\u8003\u795e\u56e2\u961f&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2554?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagea4.ydstatic.com/image?id=1242516019937932647&amp;amp;product=bisheng" alt="\u66f2\u6839\u4e07\u8bcd\u73ed\uff08\u7b2c\u4e00\u5b63\uff09" /&gt;&lt;div class="time"&gt;2017-03-27 19:00\u81f32017-05-30 20:30&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2554?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u66f2\u6839\u4e07\u8bcd\u73ed\uff08\u7b2c\u4e00\u5b63\uff09&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;199&lt;/div&gt;&lt;div class="name"&gt;\u6709\u9053\u8003\u795e\u56e2\u961f&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2548?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagea6.ydstatic.com/image?id=735080261326091621&amp;amp;product=bisheng" alt="\u82f1\u97f3\u591c\u8bfb\u4ff1\u4e50\u90e8" /&gt;&lt;div class="time"&gt;2017-03-20 22:00\u81f32017-05-25 22:15&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2548?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u82f1\u97f3\u591c\u8bfb\u4ff1\u4e50\u90e8&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;1.99&lt;/div&gt;&lt;div class="name"&gt;\u51af\u817e\u98de&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2539?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimageb7.ydstatic.com/image?id=740902712624893651&amp;amp;product=bisheng" alt="\u4e00\u5468\u65b0\u95fb\u7eb5\u6a2a\uff08\u56db\u516d\u7ea7\u5355\u9879\u73ed\uff09" /&gt;&lt;div class="time"&gt;2017-03-17 07:00\u81f32017-05-19 07:30&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2539?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u4e00\u5468\u65b0\u95fb\u7eb5\u6a2a\uff08\u56db\u516d\u7ea7\u5355\u9879\u73ed\uff09&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;1.99&lt;/div&gt;&lt;div class="name"&gt;\u826f\u51cc\u7f57&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2605?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimageb4.ydstatic.com/image?id=-8662448167973408839&amp;amp;product=bisheng" alt="\u4e07\u8bcd\u738b\u662f\u5982\u4f55\u70bc\u6210\u7684" /&gt;&lt;div class="time"&gt;2017-03-15 20:00\u81f32017-03-22 20:45&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2605?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u4e07\u8bcd\u738b\u662f\u5982\u4f55\u70bc\u6210\u7684&lt;/a&gt;&lt;/h3&gt;&lt;div class="price free"&gt;\u514d\u8d39&lt;/div&gt;&lt;div class="name"&gt;\u66f2\u6839&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2559?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagea6.ydstatic.com/image?id=-8719534790448402640&amp;amp;product=bisheng" alt="\u516d\u7ea7\u6625\u5b63\u5168\u7a0b\u901a\u51732\u73ed" /&gt;&lt;div class="time"&gt;2017-03-13 07:00\u81f32017-06-14 21:30&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2559?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u516d\u7ea7\u6625\u5b63\u5168\u7a0b\u901a\u51732\u73ed&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;199&lt;/div&gt;&lt;div class="name"&gt;\u6709\u9053\u8003\u795e\u56e2\u961f&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="IELTS" class="cate start"&gt;&lt;/div&gt;&lt;div id="Kaoyan" class="cate start"&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2564?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimageb3.ydstatic.com/image?id=5523486857979551158&amp;amp;product=bisheng" alt="\u738b\u4e00\u73c9\u8c08\u4e2d\u56fd\u8fd1\u73b0\u4ee3\u53f2\uff08\u7b2c\u4e00\u5b63\uff09" /&gt;&lt;div class="time"&gt;2017-03-22 19:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2564?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u738b\u4e00\u73c9\u8c08\u4e2d\u56fd\u8fd1\u73b0\u4ee3\u53f2\uff08\u7b2c\u4e00\u5b63\uff09&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;1.99&lt;/div&gt;&lt;div class="name"&gt;\u738b\u4e00\u73c9&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2584?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagea5.ydstatic.com/image?id=3398625668083402329&amp;amp;product=bisheng" alt="\u738b\u4e00\u73c9\u65f6\u653f\u7cbe\u534e\u8bb2\u8bc4\uff08\u4e0a\u534a\u5e74\uff09" /&gt;&lt;div class="time"&gt;2017-03-20 20:30&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2584?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u738b\u4e00\u73c9\u65f6\u653f\u7cbe\u534e\u8bb2\u8bc4\uff08\u4e0a\u534a\u5e74\uff09&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;1.99&lt;/div&gt;&lt;div class="name"&gt;\u738b\u4e00\u73c9&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2561?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagea3.ydstatic.com/image?id=-305357330740147997&amp;amp;product=bisheng" alt="\u7814\u8bfb\u9898\u6e90\u5916\u520a\uff0c\u8003\u7814\u82f1\u8bed\u76f4\u53d6\u9ad8\u5206" /&gt;&lt;div class="time"&gt;2017-03-20 19:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2561?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u7814\u8bfb\u9898\u6e90\u5916\u520a\uff0c\u8003\u7814\u82f1\u8bed\u76f4\u53d6\u9ad8\u5206&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;199&lt;/div&gt;&lt;div class="name"&gt;\u4e01\u6653\u949f&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2565?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimageb6.ydstatic.com/image?id=100538226141702738&amp;amp;product=bisheng" alt="12\u5c0f\u65f6  \u9a6c\u54f2\u539f\u7406\u771f\u76f8\u5927\u767d" /&gt;&lt;div class="time"&gt;2017-03-16 19:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2565?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;12\u5c0f\u65f6  \u9a6c\u54f2\u539f\u7406\u771f\u76f8\u5927\u767d&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;1.99&lt;/div&gt;&lt;div class="name"&gt;\u767d\u7eaf\u6d01&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2619?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimageb7.ydstatic.com/image?id=-7356222111756328672&amp;amp;product=bisheng" alt="2017\u8003\u7814\u56fd\u5bb6\u7ebf\u89e3\u6790\u5927\u4f1a" /&gt;&lt;div class="time"&gt;2017-03-15 18:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2619?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;2017\u8003\u7814\u56fd\u5bb6\u7ebf\u89e3\u6790\u5927\u4f1a&lt;/a&gt;&lt;/h3&gt;&lt;div class="price free"&gt;\u514d\u8d39&lt;/div&gt;&lt;div class="name"&gt;\u6709\u9053\u8003\u795e\u56e2\u961f&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2451?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagec6.ydstatic.com/image?id=-1703580148858319509&amp;amp;product=bisheng" alt="2018\u8003\u7814\u653f\u6cbb\u5168\u7a0b\u901a\u5173\u73ed\uff08\u76f4\u64ad\uff09" /&gt;&lt;div class="time"&gt;2017-03-14 19:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2451?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;2018\u8003\u7814\u653f\u6cbb\u5168\u7a0b\u901a\u5173\u73ed\uff08\u76f4\u64ad\uff09&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;399&lt;/div&gt;&lt;div class="name"&gt;\u6709\u9053\u8003\u795e\u56e2\u961f&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="GRE" class="cate start"&gt;&lt;/div&gt;&lt;div id="Practical" class="cate start"&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2586?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagea1.ydstatic.com/image?id=-7692552300104477212&amp;amp;product=bisheng" alt="\u7f8e\u5f0f\u82f1\u8bed\u56fd\u9645\u97f3\u6807\u7cbe\u8bb2" /&gt;&lt;div class="time"&gt;2017-03-31 20:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2586?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u7f8e\u5f0f\u82f1\u8bed\u56fd\u9645\u97f3\u6807\u7cbe\u8bb2&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;99&lt;/div&gt;&lt;div class="name"&gt;\u738b\u9738\u80c6&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2585?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagea5.ydstatic.com/image?id=7971626226603795833&amp;amp;product=bisheng" alt="5\u8282\u8bfe\u79d2\u53d8\u5199\u4f5c\u8bed\u6cd5\u8fbe\u4eba" /&gt;&lt;div class="time"&gt;2017-03-21 21:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2585?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;5\u8282\u8bfe\u79d2\u53d8\u5199\u4f5c\u8bed\u6cd5\u8fbe\u4eba&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;119&lt;/div&gt;&lt;div class="name"&gt;\u7941\u8fde\u5c71&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2556?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagea2.ydstatic.com/image?id=8272944028005476800&amp;amp;product=bisheng" alt="\u4e00\u5468\u638c\u63e17\u5927\u65e5\u5e38\u53e3\u8bed\u8bdd\u9898" /&gt;&lt;div class="time"&gt;2017-03-21 20:30\u81f32017-03-25 20:30&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2556?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u4e00\u5468\u638c\u63e17\u5927\u65e5\u5e38\u53e3\u8bed\u8bdd\u9898&lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;19.9&lt;/div&gt;&lt;div class="name"&gt;\u767d\u8d85&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2597?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagec5.ydstatic.com/image?id=2209949566407600737&amp;amp;product=bisheng" alt="\u5982\u4f55\u7ec3\u5c31\u4e00\u53e3\u6807\u51c6\u597d\u542c\u7684\u7f8e\u97f3" /&gt;&lt;div class="time"&gt;2017-03-21 20:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2597?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u5982\u4f55\u7ec3\u5c31\u4e00\u53e3\u6807\u51c6\u597d\u542c\u7684\u7f8e\u97f3&lt;/a&gt;&lt;/h3&gt;&lt;div class="price free"&gt;\u514d\u8d39&lt;/div&gt;&lt;div class="name"&gt;\u738b\u9738\u80c6&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2596?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimagec5.ydstatic.com/image?id=-8859158815307801499&amp;amp;product=bisheng" alt="\u949f\u53d4\u5e26\u4f60\u7528\u6570\u5b66\u601d\u7ef4\u79d2\u61c2\u5929\u4e0b\u82f1\u6587" /&gt;&lt;div class="time"&gt;2017-03-20 20:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2596?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u949f\u53d4\u5e26\u4f60\u7528\u6570\u5b66\u601d\u7ef4\u79d2\u61c2\u5929\u4e0b\u82f1\u6587&lt;/a&gt;&lt;/h3&gt;&lt;div class="price free"&gt;\u514d\u8d39&lt;/div&gt;&lt;div class="name"&gt;\u949f\u5e73&lt;/div&gt;&lt;/div&gt;&lt;div class="course"&gt;&lt;a href="http://xue.youdao.com/course/detail/2484?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;&lt;img src="https://oimageb4.ydstatic.com/image?id=-4936057141067547483&amp;amp;product=bisheng" alt="\u7f8e\u5f0f\u82f1\u8bed\u53d1\u97f3\u5b9e\u6218\u73ed " /&gt;&lt;div class="time"&gt;2017-03-17 20:00&lt;/div&gt;&lt;/a&gt;&lt;h3&gt;&lt;a href="http://xue.youdao.com/course/detail/2484?vendor=youdaoshouye_cof_bibeikecheng" target="_blank"&gt;\u7f8e\u5f0f\u82f1\u8bed\u53d1\u97f3\u5b9e\u6218\u73ed &lt;/a&gt;&lt;/h3&gt;&lt;div class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;119&lt;/div&gt;&lt;div class="name"&gt;\u738b\u9738\u80c6&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="discount" class="start"&gt;&lt;div class="goods"&gt;&lt;a href="http://www.huihui.cn/deals/40512817?keyfrom=dict2.index" target="_blank"&gt;&lt;img src="http://oimagec5.ydstatic.com/image?id=-90387224313788040&amp;amp;product=gouwu&amp;amp;quality=70&amp;amp;w=720" alt="10\u70b9\u798f\u5229\uff1aRicheese\u4e3d\u829d\u58eb \u7eb3\u5b9d\u5e1d\u5976\u916a\u5a01\u5316\u997c\u5e72 350g23.8\u5143\u5305\u90ae  \u524d3000\u540d\u9001\u540c\u6b3e58g" /&gt;&lt;/a&gt;&lt;div class="goods-detail"&gt;&lt;h3&gt;&lt;a href="http://www.huihui.cn/deals/40512817?keyfrom=dict2.index" target="_blank"&gt;10\u70b9\u798f\u5229\uff1aRicheese\u4e3d\u829d\u58eb \u7eb3\u5b9d\u5e1d\u5976\u916a\u5a01\u5316\u997c\u5e72 350g&lt;span&gt;23.8\u5143\u5305\u90ae  \u524d3000\u540d\u9001\u540c\u6b3e58g&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;\u8fd9\u6b3eRicheese\u4e3d\u829d\u58eb\u7eb3\u5b9d\u5e1d\u5976\u916a\u5a01\u5316\u997c\u5e72\u4ea7\u81ea\u5370\u5c3c\uff0c\u4e00\u76d2\u7684\u89c4\u683c\u662f350g\uff0c\u8fd9\u6b3e\u5a01\u5316\u7684\u53e3\u611f\u5341\u8db3\u9999\u8106\uff0c\u8fd8\u6709\u6d53\u6d53\u7684\u829d\u58eb\u5473\uff0c\u62ff...&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="goods"&gt;&lt;a href="http://www.huihui.cn/deals/40515955?keyfrom=dict2.index" target="_blank"&gt;&lt;img src="http://oimagec6.ydstatic.com/image?id=8110083977995457176&amp;amp;product=gouwu&amp;amp;quality=70&amp;amp;w=720" alt="Versus Versace \u8303\u601d\u54f2 Tokyo SOF060014   \u8c79\u7eb9\u77f3\u82f1\u5973\u8868$32\uff0c\u51d1\u5355\u8f6c\u8fd0\u7ea6232\u5143" /&gt;&lt;/a&gt;&lt;div class="goods-detail"&gt;&lt;h3&gt;&lt;a href="http://www.huihui.cn/deals/40515955?keyfrom=dict2.index" target="_blank"&gt;Versus Versace \u8303\u601d\u54f2 Tokyo SOF060014   \u8c79\u7eb9\u77f3\u82f1\u5973\u8868&lt;span&gt;$32\uff0c\u51d1\u5355\u8f6c\u8fd0\u7ea6232\u5143&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;\u8377\u5305\u541b\u6bd4\u8f83\u7626\u7684\u59b9\u7eb8\u4eec\u5feb\u770b\u770b\u8fd9\u5757\u5e73\u4ef7\u53c8\u65f6\u5c1a\u7684\u624b\u8868\u5427\uff01\u578b\u53f7SOF060014\u7684Versus Versace\u8303\u601d\u54f2Tokyo\u7cfb...&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hint-wrapper"&gt;&lt;span class="icon_arrow" style="display: none;"&gt;&lt;/span&gt;&lt;spna class="hint"&gt;\u5df2\u5230\u5e95&lt;/spna&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="fr"&gt;&lt;div class="popout"&gt;&lt;iframe src="http://c.youdao.com/www/banner.html" frameborder="0"&gt;&lt;/iframe&gt;&lt;div class="hd"&gt;&lt;a target="_blank" href="http://xue.youdao.com/course/list/0/1?keyfrom=dict2.index"&gt;\u70ed\u95e8\u8bfe\u7a0b&lt;/a&gt;&lt;/div&gt;&lt;div class="bd"&gt;&lt;div class="commodity"&gt;&lt;a href="http://xue.youdao.com/course/detail/2443?vendor=youdaoshouye_cof_youbianlan" target="_blank"&gt;&lt;img src="https://oimageb7.ydstatic.com/image?id=5044576267770573004&amp;amp;product=bisheng" alt="\u56db\u7ea7\u6625\u5b63\u5168\u7a0b\u901a\u5173\u73ed" /&gt;&lt;/a&gt;&lt;div class="commodity-detail"&gt;&lt;a target="_blank" href="http://xue.youdao.com/course/detail/2443?vendor=youdaoshouye_cof_youbianlan"&gt;&lt;h3&gt;\u56db\u7ea7\u6625\u5b63\u5168\u7a0b\u901a\u5173\u73ed&lt;/h3&gt;&lt;/a&gt;&lt;p class="userNum"&gt;&lt;/p&gt;&lt;p class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;199&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="commodity"&gt;&lt;a href="http://xue.youdao.com/course/detail/2547?vendor=youdaoshouye_cof_youbianlan" target="_blank"&gt;&lt;img src="https://oimageb8.ydstatic.com/image?id=6488206697818435491&amp;amp;product=bisheng" alt="\u949f\u53d4\u4e00\u4e2a\u516c\u5f0f\u5e26\u4f60\u8bfb\u61c2\u5929\u4e0b\u82f1\u6587" /&gt;&lt;/a&gt;&lt;div class="commodity-detail"&gt;&lt;a target="_blank" href="http://xue.youdao.com/course/detail/2547?vendor=youdaoshouye_cof_youbianlan"&gt;&lt;h3&gt;\u949f\u53d4\u4e00\u4e2a\u516c\u5f0f\u5e26\u4f60\u8bfb\u61c2\u5929\u4e0b\u82f1\u6587&lt;/h3&gt;&lt;/a&gt;&lt;p class="userNum"&gt;\u5df2\u62a5\u540d\uff1a36489\u4eba&lt;/p&gt;&lt;p class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;0&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="commodity"&gt;&lt;a href="http://xue.youdao.com/course/detail/2542?vendor=youdaoshouye_cof_youbianlan" target="_blank"&gt;&lt;img src="https://oimageb5.ydstatic.com/image?id=1868453086723517357&amp;amp;product=bisheng" alt="\u6625\u62db\u6c42\u804c\u96c6\u8bad\u8425\uff0c5\u6b65\u641e\u5b9aoffer\uff01" /&gt;&lt;/a&gt;&lt;div class="commodity-detail"&gt;&lt;a target="_blank" href="http://xue.youdao.com/course/detail/2542?vendor=youdaoshouye_cof_youbianlan"&gt;&lt;h3&gt;\u6625\u62db\u6c42\u804c\u96c6\u8bad\u8425\uff0c5\u6b65\u641e\u5b9aoffer\uff01&lt;/h3&gt;&lt;/a&gt;&lt;p class="userNum"&gt;&lt;/p&gt;&lt;p class="price"&gt;&lt;span&gt;\uffe5&lt;/span&gt;49.9&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="footer"&gt;&lt;div class="wrap"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="http://www.youdao.com/about/"&gt;\u5173\u4e8e\u6709\u9053&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://dsp.youdao.com/"&gt;\u6709\u9053\u667a\u9009&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://i.youdao.com/"&gt;\u5b98\u65b9\u535a\u5ba2&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://techblog.youdao.com/"&gt;\u6280\u672f\u535a\u5ba2&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://campus.youdao.com/index.php?t1=index"&gt;\u8bda\u8058\u82f1\u624d&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://shared.youdao.com/www/contactus-page.html"&gt;\u8054\u7cfb\u6211\u4eec&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://dict.youdao.com/map/index.html"&gt;\u7ad9\u70b9\u5730\u56fe&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://www.12377.cn/"&gt;\u7f51\u7edc\u4e3e\u62a5&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;\xa9&lt;script&gt;document.write(new Date().getFullYear());&lt;/script&gt;2017&lt;a href="http://www.163.com/"&gt;\u7f51\u6613\u516c\u53f8&lt;/a&gt; &lt;a href="http://www.youdao.com/terms/privacy.html"&gt;\u9690\u79c1\u653f\u7b56&lt;/a&gt; &lt;a href="http://www.youdao.com/terms/index.html"&gt;\u670d\u52a1\u6761\u6b3e&lt;/a&gt; \u4eacICP\u8bc1080268\u53f7&lt;/div&gt;&lt;/div&gt;&lt;p class="phone"&gt;\u8fdd\u6cd5\u548c\u4e0d\u826f\u4fe1\u606f\u4e3e\u62a5\u7535\u8bdd\uff1a010-82558163&lt;/p&gt;&lt;/div&gt;&lt;a id="backToTop" href="javascript:void(0);"&gt;\u8fd4\u56de\u5230\u9876\u90e8&lt;/a&gt;&lt;div id="handWrite" class="pm" style="display:none"&gt;&lt;object type="application/x-shockwave-flash" id="hnw" data="http://shared.ydstatic.com/dict/v5.16/swf/Hnw.swf" width="346" height="216"&gt;&lt;param name="movie" value="${DictStaticBase}swf/Hnw.swf" /&gt;&lt;param name="menu" value="false" /&gt;&lt;param name="allowScriptAccess" value="always" /&gt;&lt;/object&gt;&lt;/div&gt;&lt;div id="callback"&gt;&lt;script type="text/javascript" src="http://dict.youdao.com/infoline?apiversion=2&amp;amp;mode=publish&amp;amp;client=deskdict&amp;amp;keyfrom=dict2.index&amp;amp;startDate=2017-03-15&amp;amp;callback=vistaCallback" charset="utf-8"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="http://xue.youdao.com/api/course/list/23/1.jsonp?callback=courseIELTSCallback" charset="utf-8"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="http://www.huihui.cn/deals/channel.json?callback=discountCallback" charset="utf-8"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="http://xue.youdao.com/api/course/list/1/1.jsonp?callback=courseCETCallback" charset="utf-8"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="http://xue.youdao.com/api/course/list/7/1.jsonp?callback=courseKaoyanSCallback" charset="utf-8"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="http://xue.youdao.com/api/course/list/2/1.jsonp?callback=courseGRECallback" charset="utf-8"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="http://xue.youdao.com/api/course/list/3/1.jsonp?callback=coursePracticalCallback" charset="utf-8"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="http://xue.youdao.com/api/course/recommend.jsonp?type=youdaoweb&amp;amp;callback=sideCourseCallback" charset="utf-8"&gt;&lt;/script&gt;&lt;/div&gt;&lt;script src="http://shared.ydstatic.com/js/jquery/jquery-1.12.3.min.js"&gt;&lt;/script&gt;&lt;script src="http://shared.ydstatic.com/dict/v2016/entry/jquery.mousewheel.js"&gt;&lt;/script&gt;&lt;script src="http://shared.ydstatic.com/dict/v2016/entry/jquery.placeholder.js"&gt;&lt;/script&gt;&lt;script src="http://shared.ydstatic.com/dict/v2016/entry/autocomplete_json.js"&gt;&lt;/script&gt;&lt;script src="http://shared.ydstatic.com/dict/v2016/entry/pc.js"&gt;&lt;/script&gt;&lt;script defer="defer" src="http://shared.ydstatic.com/js/rlog/v1.js"&gt;&lt;/script&gt;&lt;div&gt;&lt;script src="http://dsuggest.ydstatic.com/suggest.s?query=%E4%BD%A0%E5%A5%BD&amp;amp;keyfrom=dict2.index.suggest&amp;amp;o=form&amp;amp;rn=10&amp;amp;h=8&amp;amp;le=eng" charset="utf-8"&gt;&lt;/script&gt;&lt;/div&gt;&lt;div style="position: absolute; z-index: 10000; display: none;"&gt;&lt;/div&gt;&lt;iframe style="position: absolute; z-index: 9999; display: none;"&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+1491381727860	geckodriver	INFO	Listening on 127.0.0.1:64661
+1491381729711	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.LupeGlK8RtF1
+1491381729718	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1491381729731	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64672
+1491381733380	Marionette	INFO	Listening on port 64672
+1491381735220	Marionette	INFO	startBrowser 449275ab-13ed-4847-bfa4-b8b93460a649
+[Child 10712] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Child 7472] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+/sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ceshi&json=1&p=3&sid=1453_19033_13290_21122_17001_22035_22074&req=2&csor=5&pwd=cesh&cb=jQuery11020538816887592811_1489634656033&_=1489634656039, line 1: TypeError: jQuery11020538816887592811_1489634656033 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ce&json=1&p=3&sid=1453_19033_13290_21122_17001_22035_22074&req=2&csor=2&pwd=c&cb=jQuery11020538816887592811_1489634656033&_=1489634656036, line 1: TypeError: jQuery11020538816887592811_1489634656033 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=cesh&json=1&p=3&sid=1453_19033_13290_21122_17001_22035_22074&req=2&csor=4&pwd=ces&cb=jQuery11020538816887592811_1489634656033&_=1489634656038, line 1: TypeError: jQuery11020538816887592811_1489634656033 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ces&json=1&p=3&sid=1453_19033_13290_21122_17001_22035_22074&req=2&csor=3&pwd=ce&cb=jQuery11020538816887592811_1489634656033&_=1489634656037, line 1: TypeError: jQuery11020538816887592811_1489634656033 is not a function
+[Child 3540] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[NPAPI 9404] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+
+1489634357007	geckodriver	INFO	Listening on 127.0.0.1:53466
+1489634359051	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.TV5Ae78RAETL
+1489634359056	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489634359066	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53472
+1489634360259	Marionette	INFO	Listening on port 53472
+1489634362109	Marionette	INFO	startBrowser 25e2ad37-0363-4e0e-b18a-90b61b64dd6d
+[Child 8740] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346

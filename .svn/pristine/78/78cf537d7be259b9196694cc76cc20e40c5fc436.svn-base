@@ -1,0 +1,16 @@
+1489540885285	geckodriver	INFO	Listening on 127.0.0.1:56526
+1489540887293	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.bbgck6fAZl42
+1489540887297	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489540887304	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56532
+1489540888473	Marionette	INFO	Listening on port 56532
+1489540890015	Marionette	INFO	startBrowser 888b9237-f5fc-4faa-93f9-eb5f4b56bbbe
+[Child 1128] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+Query110202607215793543428_1489540881662&_=1489540881664, line 1: TypeError: jQuery110202607215793543428_1489540881662 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=te&json=1&p=3&sid=1421_21079_22035&req=2&csor=2&pwd=t&cb=jQuery110202607215793543428_1489540881662&_=1489540881665, line 1: TypeError: jQuery110202607215793543428_1489540881662 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=test&json=1&p=3&sid=1421_21079_22035&req=2&csor=4&pwd=tes&cb=jQuery110202607215793543428_1489540881662&_=1489540881667, line 1: TypeError: jQuery110202607215793543428_1489540881662 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=tes&json=1&p=3&sid=1421_21079_22035&req=2&csor=3&pwd=te&cb=jQuery110202607215793543428_1489540881662&_=1489540881666, line 1: TypeError: jQuery110202607215793543428_1489540881662 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=test2&json=1&p=3&sid=1421_21079_22035&req=2&csor=5&pwd=test&cb=jQuery110202607215793543428_1489540881662&_=1489540881668, line 1: TypeError: jQuery110202607215793543428_1489540881662 is not a function
+[Child 10512] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[NPAPI 8792] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+z2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+nel.cpp, line 2052
