@@ -1,0 +1,12 @@
+1491383446017	geckodriver	INFO	Listening on 127.0.0.1:49829
+1491383448062	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.1gDUJ3qJ5vMQ
+1491383448067	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1491383448078	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49836
+1491383449308	Marionette	INFO	Listening on port 49836
+1491383451164	Marionette	INFO	startBrowser 5e543c36-949c-4b9e-ae5d-f578fbddfa19
+[Child 9684] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Vector smash protection is enabled.
+JavaScript error: http://impservice.dictapp.youdao.com/imp/Rookie.js?http://shared.ydstatic.com/ead/swf/rookie.swf, line 2: Error: Permission denied to access property "href"
+JavaScript error: http://impservice.dictapp.youdao.com/imp/Rookie.js?http://shared.ydstatic.com/ead/swf/rookie.swf, line 2: Error: Permission denied to access property "href"
+[Child 8280] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[NPAPI 6164] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
