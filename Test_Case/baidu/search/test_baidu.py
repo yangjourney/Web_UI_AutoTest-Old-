@@ -7,6 +7,7 @@ Project:登录百度测试用例
 from selenium import webdriver
 import unittest, time, ddt, os
 from Common.ExcelUtil import ExcelUtil
+from gevent.hub import sleep
 
 # 获取当前工程目录下的Excel文件，可根据实际情况进行调整
 excel_path = os.path.abspath("E:\workspace\Web_UI_AutoTest\Data\Data.xls")
@@ -25,7 +26,7 @@ class BaiduTest(unittest.TestCase):
 
         self.driver = webdriver.Firefox()
         self.driver.maximize_window()        
-        self.driver.implicitly_wait(30)  # 隐性等待时间为30秒
+        sleep (3)  # 隐性等待时间为30秒
         self.base_url = "https://www.baidu.com"
     @ddt.data(*excel.next()) 
     def test_baidu(self, data):

@@ -1,10 +1,11 @@
-1491381727860	geckodriver	INFO	Listening on 127.0.0.1:64661
-1491381729711	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.LupeGlK8RtF1
-1491381729718	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
-1491381729731	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64672
-1491381733380	Marionette	INFO	Listening on port 64672
-1491381735220	Marionette	INFO	startBrowser 449275ab-13ed-4847-bfa4-b8b93460a649
-[Child 10712] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1491383759279	geckodriver	INFO	Listening on 127.0.0.1:50317
+1491383761325	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.sdPmUABy7cZF
+1491383761333	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1491383761346	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50323
+1491383762782	Marionette	INFO	Listening on port 50323
+1491383764767	Marionette	INFO	startBrowser a948fcef-31d7-441d-ab8f-20c465b14573
+[Child 8204] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
 Child 7472] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 /sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ceshi&json=1&p=3&sid=1453_19033_13290_21122_17001_22035_22074&req=2&csor=5&pwd=cesh&cb=jQuery11020538816887592811_1489634656033&_=1489634656039, line 1: TypeError: jQuery11020538816887592811_1489634656033 is not a function
 JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ce&json=1&p=3&sid=1453_19033_13290_21122_17001_22035_22074&req=2&csor=2&pwd=c&cb=jQuery11020538816887592811_1489634656033&_=1489634656036, line 1: TypeError: jQuery11020538816887592811_1489634656033 is not a function
